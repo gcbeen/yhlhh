@@ -1,0 +1,514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+联行号-银行联行号查询</title>
+<meta name="keywords" content="联行号,开户联行号,联行号查询,,联行号查询网址,联行号是什么,银行联行号,电子联行号,开户行联行号,银行联行号在线查询,怎样查询银行联行号,工商银行联行号查询,建设银行联行号查询,中国银行联行号查询,招商银行联行号查询,中国农业银行联行号查询,银行联行号查询系统,银行联行号查询网站" />
+<meta name="description" content="银行联行号就是一个地区银行的唯一识别标志。用于人民银行所组织的大额支付系统\小额支付系统\城市商业银行银行汇票系统\全国支票影像系统（含一些城市的同城票据自动清分系统）等跨区域支付结算业务。由12位组成：3位银行代码+4位城市代码+4位银行编号+1位校验位。" />
+<link href="/Admin_Public/css/body.css" rel="stylesheet" type="text/css" />
+<link href="/Public/home/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/Public/home/css/zzsc.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Public/home/js/jquery-1.10.2.min.js"></script>
+<script src="/Public/home/js/jquery.js"></script>
+<SCRIPT>
+	function toueme(){
+		document.getElementById("toubiao").style.display="none";
+	}
+</SCRIPT>
+</head>
+
+<body>
+<DIV id=toubiao>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="4%" height="30" align="center"><img src="/gg/kids.gif" width="15" height="14"></td>
+    <td width="82%">很多网友记不住我们域名,我们域名是"联行号""lianhanghao"在中间,网址:www.lianhanghao.com。</td>
+    <td width="14%" align="right"><a style="CURSOR: hand" onClick=toueme()><img 
+      src="/gg/close.gif" width=84 height=11 hspace="6" border=0></a></td>
+  </tr>
+</table>
+</DIV>
+<!--导航1-->
+<!--<div class="width left head_1">
+	
+</div>-->
+
+<!--导航2-->
+<div class="width left head_2">
+	<div class="width_11 auto header">
+    	<div class="left logo"><img src="/Public/home/img/logo.png" /></div>
+        <div class="right">
+        	<ul id="nav">
+            	<li id="Out"><a href="http://lianhanghao.com/">首页</a></li>
+                <li><a href="http://lianhanghao.com/news/showlist/id/0.html">最新公告</a></li>
+                <li><a href="http://lianhanghao.com/news/showlist/id/1.html">帮助中心</a></li>
+                <li><a href="http://lianhanghao.com/liuyan.html">纠错</a></li>
+                <li><a href="http://lianhanghao.com/dan/index/id/1.html">关于我们</a></li>
+                <li><a href="http://lianhanghao.com/dan/index/id/2.html">pos机错误代码</a></li>
+                <li><a href="http://lianhanghao.com/dan/index/id/3.html">所属第三方</a></li>
+                <li><a href="http://lianhanghao.com/fl.html">商户类别</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" language="javascript">
+var urlstr = location.href;
+$('#nav a').each(function () {
+	if ($(this).attr('href') == urlstr) {
+		$(this).parent('li').addClass('gol');
+	}
+});
+
+ // AJAX分页,点击分页按钮
+$('#Out a').click(function () {
+	$.ajax({
+		type: 'get',
+		url: '/Index/Out',
+		success: function(res) {
+			//alert(res);
+		}
+	});
+});
+</script>
+<style>
+.input-text{box-sizing: border-box;width: 20%;-webkit-transition: all 0.2s linear 0s;-moz-transition: all 0.2s linear 0s;-o-transition: all 0.2s linear 0s;transition: all 0.2s linear 0s;font-size: 14px;height: 30px;padding: 4px;color:#838383;}
+.Jun-TiJiao{color: #fff; display: inline-block;box-sizing: border-box;cursor: pointer;text-align: center;
+font-weight: 400;width: auto;padding: 4px 12px;font-size: 14px;height: 31px;color: #fff;background-color: #5a98de; border:0px;margin-top: 20px;}
+.list2 span {color:#000;font-size: 15px;}
+
+.table {color: #666;background: #FFF;width: 100%;margin-bottom: 20px;font-size: 12px;border-top: 1px solid #e1e6eb;margin-top: 8px;border: 1px solid #e1e6eb;}
+.table thead tr th {padding: 8px 8px;font-weight: normal;color: #999;border-bottom: 1px solid #e1e6eb;background-color: #F5F6FA;text-align: left; font-size:15px}
+.table tbody tr td {padding: 12px 8px;border-top: 0px;border-bottom: 1px solid #e1e6eb;vertical-align: middle;line-height: 1.428571429;border-right: 1px solid #e1e6eb; font-size: 14.5px;}
+.table tbody tr td a {color: #06C;cursor: pointer;}
+.pull-left{width:300px;}
+tfoot{background-color: #f5f6fa;}
+
+.pagination a{padding:0px;display: inline;color:#666;border: 1px solid #dddddd;margin-left: -1px;background-color: #ffffff;border-color: #dddddd;padding: 6px 12px;}
+.current{border-top: 0px;z-index: 3;background-color: #09C;border: 1px solid #09C;padding: 6px 12px;color:#fff;border: 1px solid #09C;}
+
+</style>
+
+<script>
+$(function() {
+	$("#cnapsSubmit").click(function() {
+		if($('#bank').val()==''){
+			alert('请选择银行');
+			$('#bank').focus();
+		}else if($('#province').val()==''){
+			alert('请选择省份');
+			$('#province').focus();
+		}else if($('#city').val()==''){
+			alert('请选择城市');
+			$('#city').focus();
+		}else{
+		    $("#cnapsQuery").submit();
+		}
+	});
+	
+	$('#province').change(function(){
+		provinceChange();
+	});
+});
+function provinceChange() {
+    var province = $('#province').val();
+    var cityTmp = $("#cityTmp").val();
+
+	$("#city").empty();
+	$.get('/index.php/Index/Ajax',
+	{'id':province},
+	function (data){
+		$("#city").append("<option value='' selected>--请选择--</option>");
+		var obj = eval(data);
+		
+		for(var i=0;i<obj.length;i++){
+			if (cityTmp == obj[i]['id']) {
+				$("#city").append("<option value='"+obj[i]['id']+"' selected>"+obj[i]['name']+"</option>");
+			}else{
+				$("#city").append("<option value='"+obj[i]['id']+"'>"+obj[i]['name']+"</option>");  	
+			}			
+		} 
+	});
+
+}
+
+
+
+</script>
+
+<!--列表list-->
+<div class="width left list" style="background:none">
+	<div class="width_11 auto list2" >
+    	  <form id="cnapsQuery" action="index.php" method="get">
+          
+            <span>银行名称:</span>
+            <select name="bank" id="bank" class="input-text" style="width:150px">
+                <option value="">--请选择--</option>
+                <option value="1" selected="selected">中国工商银行</option>
+                                            <option value="2">中国农业银行</option>                        <option value="3">中国银行</option>                        <option value="4">中国建设银行</option>                        <option value="5">国家开发银行</option>                        <option value="6">中国进出口银行</option>                        <option value="7">中国农业发展银行</option>                        <option value="8">交通银行</option>                        <option value="9">中国邮政储蓄银行</option>                        <option value="10">中信银行</option>                        <option value="11">中国光大银行</option>                        <option value="12">华夏银行</option>                        <option value="13">中国民生银行</option>                        <option value="14">广东发展银行</option>                        <option value="69">平安银行</option>                        <option value="16">招商银行</option>                        <option value="17">兴业银行</option>                        <option value="18">上海浦东发展银行</option>                        <option value="19">城市商业银行</option>                        <option value="20">农村商业银行</option>                        <option value="21">恒丰银行</option>                        <option value="22">农村合作银行</option>                        <option value="72">村镇银行</option>                        <option value="24">徽商银行</option>                        <option value="25">城市信用社</option>                        <option value="26">农村信用联社</option>                        <option value="27">香港上海汇丰银行</option>                        <option value="28">东亚银行</option>                        <option value="29">南洋商业银行</option>                        <option value="30">恒生银行</option>                        <option value="31">中国银行（香港）</option>                        <option value="32">(香港地区)银行</option>                        <option value="33">集友银行</option>                        <option value="34">星展银行（香港）</option>                        <option value="35">永亨银行</option>                        <option value="36">美国花旗银行</option>                        <option value="37">美国银行</option>                        <option value="38">美国摩根大通银行</option>                        <option value="39">日本三菱东京日联银行</option>                        <option value="40">日本日联银行</option>                        <option value="41">日本三井住友银行</option>                        <option value="42">日本瑞穗实业银行</option>                        <option value="43">日本山口银行</option>                        <option value="44">韩国外换银行</option>                        <option value="45">韩国新韩银行</option>                        <option value="46">韩国友利银行</option>                        <option value="47">韩国产业银行</option>                        <option value="48">韩国中小企业银行</option>                        <option value="49">新加坡星展银行</option>                        <option value="50">奥地利中央合作银行</option>                        <option value="51">比利时联合银行</option>                        <option value="52">荷兰银行</option>                        <option value="53">荷兰商业银行</option>                        <option value="54">渣打银行</option>                        <option value="55">法国兴业银行</option>                        <option value="56">法国巴黎银行</option>                        <option value="57">法国东方汇理银行</option>                        <option value="58">德国德累斯登银行</option>                        <option value="59">德意志银行</option>                        <option value="60">德国商业银行</option>                        <option value="61">德国西德银行</option>                        <option value="62">德国巴伐利亚州银行</option>                        <option value="63">瑞士信贷银行</option>                        <option value="64">加拿大蒙特利尔银行</option>                        <option value="65">澳大利亚和新西兰银行集团</option>                        <option value="66">德富泰银行</option>                        <option value="67">厦门国际银行</option>                        <option value="68">法国巴黎银行（中国）</option>                        <option value="15">深圳发展银行</option>                        <option value="70">青岛国际银行</option>                        <option value="71">华一银行</option>                        <option value="23">渤海银行</option>              </select>
+            <span>省份：</span>
+            <select class="input-text" name="province" id="province" style="width:130px">
+                <option value="">--请选择--</option>
+                                        <option value="1">北京市</option>                        <option value="2">天津市</option>                        <option value="3">河北省</option>                        <option value="4">山西省</option>                        <option value="5">内蒙古自治区</option>                        <option value="6">辽宁省</option>                        <option value="7">吉林省</option>                        <option value="8">黑龙江省</option>                        <option value="9">上海市</option>                        <option value="10">江苏省</option>                        <option value="11">浙江省</option>                        <option value="12">安徽省</option>                        <option value="13">福建省</option>                        <option value="14">江西省</option>                        <option value="15">山东省</option>                        <option value="16">河南省</option>                        <option value="17">湖北省</option>                        <option value="18">湖南省</option>                        <option value="19">广东省</option>                        <option value="20">广西壮族自治区</option>                        <option value="21">海南省</option>                        <option value="22">四川省</option>                        <option value="23">重庆市</option>                        <option value="24">贵州省</option><option value="25" selected="selected">云南省</option>
+                                            <option value="26">西藏自治区</option>                        <option value="27">陕西省</option>                        <option value="28">甘肃省</option>                        <option value="29">青海省</option>                        <option value="30">宁夏回族自治区</option>                        <option value="31">新疆维吾尔族自治区</option>                        <option value="32">台湾</option>                        <option value="33">香港</option>                        <option value="34">澳门</option>            </select>
+            <span>城市：</span>
+            <select class="input-text" name="city" id="city" style="width:120px">
+            	<option value="">--请选择--</option>
+                                        <option value="296">昆明市</option><option value="297" selected="selected">昭通市</option>
+                                            <option value="298">曲靖市</option>                        <option value="299">玉溪市</option>                        <option value="300">思茅市</option>                        <option value="301">保山市</option>                        <option value="302">丽江市</option>                        <option value="303">临沧市</option>            </select>
+            <span>关键字：</span>
+            <input name="key" id="key" class="input-text" type="text" value="
+">
+            <button class="Jun-TiJiao" type="button" id="cnapsSubmit">查询</button>
+        </form>
+        
+    </div>
+    <!--ss-->
+	<div class="width left gg">
+	<div class="width_11 auto gg">
+    	<div id="a22">
+		<script type="text/javascript" src="/gg/a2aa.js"></script>	
+		<div class="delfloat"></div>
+		</div>
+		<div id="a22">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- lhh_1000 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:1000px;height:50px"
+     data-ad-client="ca-pub-5072403457294119"
+     data-ad-slot="4579833847"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+		</div>
+	</div>
+</div>
+	<!--ss-->
+    <div class="width_11 auto list3">
+    
+    	<table class="table table-hover" class="t2" width="100%" cellspacing="0">
+      <thead>
+        <tr>
+          <th width="130">联行行号</th>
+          <th>银行名称</th>
+          <th>电话</th>
+          <th>地址</th>
+        </tr>
+      </thead>
+      <tbody>
+  		<tr>
+          <td align="center">102735204086</td>
+          <td style="padding-left: 5px;" align="left">中国工商银行云南昭通分行水富县支行</td>
+          <td style="padding-left: 5px;" align="left">0870-8638550</td>
+          <td style="padding-left: 5px;border-right:0px" align="left">云南省昭通市水富县人民西路8号</td>
+        </tr><tr>
+          <td align="center">102735200190</td>
+          <td style="padding-left: 5px;" align="left">中国工商银行云南昭通分行水富向家坝分理处</td>
+          <td style="padding-left: 5px;" align="left">0870-8637591</td>
+          <td style="padding-left: 5px;border-right:0px" align="left">云南省昭通市水富向家坝镇人民东路208号</td>
+        </tr><tr>
+          <td align="center">102735200181</td>
+          <td style="padding-left: 5px;" align="left">中国工商银行云南昭通分行水富云天化支行</td>
+          <td style="padding-left: 5px;" align="left">0870-8631654</td>
+          <td style="padding-left: 5px;border-right:0px" align="left">云南省昭通市水富县向家坝镇团结路</td>
+        </tr><tr>
+          <td align="center">102734604045</td>
+          <td style="padding-left: 5px;" align="left">中国工商银行云南昭通分行永善县支行</td>
+          <td style="padding-left: 5px;" align="left">0870-4121025</td>
+          <td style="padding-left: 5px;border-right:0px" align="left">云南省昭通市永善兴隆街18号</td>
+        </tr><tr>
+          <td align="center">102734004024</td>
+          <td style="padding-left: 5px;" align="left">中国工商银行云南昭通分行营业部</td>
+          <td style="padding-left: 5px;" align="left">0870-2121498</td>
+          <td style="padding-left: 5px;border-right:0px" align="left">云南省昭通市爱民路61号</td>
+        </tr><tr>
+          <td align="center">102734004016</td>
+          <td style="padding-left: 5px;" align="left">中国工商银行云南昭通分行会计业务处理中心</td>
+          <td style="padding-left: 5px;" align="left">0870-2228842</td>
+          <td style="padding-left: 5px;border-right:0px" align="left">云南省昭通市爱民路61号</td>
+        </tr><tr>
+          <td align="center">102734002674</td>
+          <td style="padding-left: 5px;" align="left">中国工商银行云南昭通分行安居支行</td>
+          <td style="padding-left: 5px;" align="left">0870-2234333</td>
+          <td style="padding-left: 5px;border-right:0px" align="left">云南省昭通市昭阳区海楼路34号</td>
+        </tr><tr>
+          <td align="center">102734002086</td>
+          <td style="padding-left: 5px;" align="left">中国工商银行云南昭通分行牡丹支行</td>
+          <td style="padding-left: 5px;" align="left">0870-2220550</td>
+          <td style="padding-left: 5px;border-right:0px" align="left">云南省昭通市昭阳区凤霞路129号</td>
+        </tr><tr>
+          <td align="center">102734002060</td>
+          <td style="padding-left: 5px;" align="left">中国工商银行云南昭通分行凤霞支行</td>
+          <td style="padding-left: 5px;" align="left">0870-2223074</td>
+          <td style="padding-left: 5px;border-right:0px" align="left">云南省昭通市昭阳区月牙路粮贸大厦一楼</td>
+        </tr><tr>
+          <td align="center">102734002051</td>
+          <td style="padding-left: 5px;" align="left">中国工商银行云南昭通分行北门分理处</td>
+          <td style="padding-left: 5px;" align="left">0870-2120064</td>
+          <td style="padding-left: 5px;border-right:0px" align="left">云南省昭通市昭阳区龙泉路43号</td>
+        </tr>        
+        </tbody>
+        
+        <tfoot>
+        <tr style=" height: 50px; background-color: #fff; text-align: right;">
+            <td colspan="5">
+                <div class="pagination" style="margin-right:10px"><div>    </div></div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+    </div>
+</div>
+
+<!--广告-->
+<div class="width left gg">
+	<div class="width_11 auto gg">
+			<div id="a3">
+		<ul>
+			<li style="float:left"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new_lhh_1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:234px;height:60px"
+     data-ad-client="ca-pub-5072403457294119"
+     data-ad-slot="5819881444"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></li>
+			<li><a href="/liuyan.html" target="_blank"><img src="/gg/my.png" width="234px" height="60px" /></a></li>
+			<li><img src="/gg/xyk.png" width="234px" height="60px" /></li>
+			<li style="float:right"><script type="text/javascript">
+    /*234*60 创建于 ‎2016‎年‎11‎月‎8‎日*/
+    var cpro_id = "u2811498";
+</script>
+<script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/c.js"></script></li>
+		</ul>
+		</div>
+		
+    	<div class="left"><iframe src="http://www.itangmen.com/?a=code&type=search" frameborder="0" scrolling="no" width="1000" height="34"></iframe></div>  
+    </div>
+</div>
+
+<!--广告-->
+<div class="width left tag">---重要-合作-伙伴-各大-银行-链接---</div>
+
+<!--卡点-->
+<div class="width left kadian">
+	<div class="width_11 auto kadian2">
+    	<div class="width left top">
+    		<div><a href="https://www.alipay.com/"><img src="/Public/home/img/1/alipay.png" /></a></div>    
+            <div><a href="https://www.tenpay.com/"><img src="/Public/home/img/1/tenpay.png" /></a></div>    
+            <div><a href="https://www.xm9.org/"><img src="/Public/home/img/1/99pay.png" /></a></div>    
+            <div><a href="http://www.chinapay.com/"><img src="/Public/home/img/1/unionpay.png" /></a></div>    
+        </div>
+    
+    	<div class="width left bottom">
+           <div> 	
+                <ul>
+                	<li class="img"><a href="http://www.boc.cn/" target="_blank"><img src="/Public/home/img/1/zg.png"></a></li>
+                    <li class="ka_1"><a href="http://www.boc.cn/bcservice/" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://www.bankofchina.com/sourcedb/operations/" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://www.boc.cn/sourcedb/atmdist/" target="_blank">ATM</a></li>
+                    <li class="ys_1">客服:95566</li>                    <li class="ys_2">信用卡:400-66-95566</li>
+                </ul>
+            </div>
+        	<div>
+            	<ul>
+                	<li class="img"><a href="http://www.ccb.com/" target="_blank"><img src="/Public/home/img/1/js.png"></a></li>
+                    <li class="ka_1"><a href="http://creditcard.ccb.com/" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://tool.ccb.com/outlet/frontOprNodeQuery.gsp?_Lev1Code=110&amp;_Lev2Code=&amp;_NodeType=101" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://tool.ccb.com/outlet/frontATMNodeQuery.gsp?_Lev1Code=110&amp;_Lev2Code=&amp;_NodeType=102&amp;nodeType=4" target="_blank">ATM</a></li>
+                    <li class="ys_1">客服:95533</li>                    <li class="ys_2">信用卡:400-820-0588</li>
+                </ul>
+            </div>
+        	<div>
+            	<ul>
+                	<li class="img"><a href="http://www.abchina.com/" target="_blank"><img src="/Public/home/img/1/ny.png"></a></li>
+                    <li class="ka_1"><a href="http://www.abchina.com/cn/CreditCard/default.htm" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://app.abchina.com/branch/?X-ClientIP=220.181.126.42" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://www.abchina.com/cn/PublicPlate/sfbz/rmbjs/" target="_blank">资费</a>
+                    <li class="ys_1">客服:95599</li>                    <li class="ys_2">信用卡:400-66-95599</li>
+                </ul>
+            </div>
+        	<div>
+            	<ul>
+                	<li class="img"><a href="http://www.icbc.com.cn/" target="_blank"><img src="/Public/home/img/1/gs.png"></a></li>
+                    <li class="ka_1"><a href="http://www.icbc.com.cn/icbc/%e7%89%a1%e4%b8%b9%e5%8d%a1/" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://www.icbc.com.cn/icbc/%E5%AE%A2%E6%88%B7%E6%9C%8D%E5%8A%A1/business_offices.htm" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://www.icbc.com.cn/ICBC/%E9%87%91%E8%9E%8D%E4%BF%A1%E6%81%AF/%E8%B5%84%E8%B4%B9%E5%85%AC%E5%91%8A/%E4%B8%AD%E5%9B%BD%E5%B7%A5%E5%95%86%E9%93%B6%E8%A1%8C%E6%9C%8D%E5%8A%A1%E4%BB%B7%E7%9B%AE%E8%A1%A8%E7%94%B5%E5%AD%90%E9%93%B6%E8%A1%8C2012%E7%89%88.htm" target="_blank">资费</a>
+                    <li class="ys_1">客服:95588</li>                    <li class="ys_2">信用卡:95588</li>
+                </ul>
+            </div>
+        	<div>
+            	<ul>
+                	<li class="img"><a href="http://www.psbc.com/" target="_blank"><img src="/Public/home/img/1/yz.png"></a></li>
+                    <li class="ka_1"><a href="http://www.psbc.com/portal/zh_CN/CreditCard/index.html" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://www.psbc.com/portal/zh_CN/Home/Inquiries/institution.html" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://www.psbc.com/portal/zh_CN/PersonalBanking/InformationSearch/443.html" target="_blank">利率</a>
+                    <li class="ys_1">客服:95580</li>                    <li class="ys_2">信用卡:400-88-95580</li>
+                </ul>
+            </div>
+        	<div>
+            	<ul>
+                	<li class="img"><a href="http://www.bankcomm.com/" target="_blank"><img src="/Public/home/img/1/jt.png"></a></li>
+                    <li class="ka_1"><a href="http://creditcard.bankcomm.com/bcms/index.htm" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://www.bankcomm.com/BankCommSite/cn/node/index.jsp" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://www.bankcomm.com/BankCommSite/cn/fwml/index.html" target="_blank">资费</a>
+                    <li class="ys_1">客服:95559</li>                    <li class="ys_2">信用卡:400-800-9888</li>
+                </ul>
+            </div>
+        	<div>
+            	<ul>
+                	<li class="img"><a href="http://www.cebbank.com/" target="_blank"><img src="/Public/home/img/1/gd.png"></a></li>
+                    <li class="ka_1"><a href="http://xyk.cebbank.com/" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://www.cebbank.com/jsp/emap/emap_index.jsp" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://www.cebbank.com/static/s_upload/201204/79744143/index.html" target="_blank">资费</a>
+                    <li class="ys_1">客服:95595</li>                    <li class="ys_2">信用卡:400-78-88888</li>
+                </ul>
+            </div>
+        	<div>
+            	<ul>
+                	<li class="img"><a href="http://www.spdb.com.cn/" target="_blank"><img src="/Public/home/img/1/pf.png"></a></li>
+                    <li class="ka_1"><a href="http://www.spdbccc.com.cn/zh/index.htm" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://www.spdb.com.cn/docpage/c239/200411/1108_239_12403.aspx" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://www.spdb.com.cn/docpage/c459/200602/0228_459_13553.aspx" target="_blank">储蓄</a>
+                    <li class="ys_1">客服:95528</li>                    <li class="ys_2">信用卡:400-82-08788</li>
+                </ul>
+            </div>
+        	<div>
+            	<ul>
+                	<li class="img"><a href="http://bank.ecitic.com/" target="_blank"><img src="/Public/home/img/1/zx.png"></a></li>
+                    <li class="ka_1"><a href="http://cards.ecitic.com/" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://www.ecitic.com/map.shtml" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://bank.ecitic.com/eic_notice/personal_noticed/index.shtml?pId=0&amp;sId=1" target="_blank">理财</a>
+                    <li class="ys_1">客服:95558</li>                    <li class="ys_2">信用卡:400-88-95558</li>
+                </ul>
+            </div>
+        	<div>
+            	<ul>
+                	<li class="img"><a href="http://www.cib.com.cn/" target="_blank"><img src="/Public/home/img/1/xy.png"></a></li>
+                    <li class="ka_1"><a href="http://www.cib.com.cn/netbank/cn/page/creditcard.html" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://www.cib.com.cn/netbank/cn/About_IB/Outlet_Locator.html" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://www.cib.com.cn/netbank/cn/About_IB/Charge_Table/zfdj.html" target="_blank">资费</a>
+                    <li class="ys_1">客服:95561</li><li class="ys_2">贵宾:400-88-95561</li>
+                </ul>
+            </div>
+        	<div>
+            	<ul>
+                	<li class="img"><a href="http://www.cmbchina.com/" target="_blank"><img src="/Public/home/img/1/zs.png"></a></li>
+                    <li class="ka_1"><a href="http://creditcard.cmbchina.com/" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://map.cmbchina.com/" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://www.cmbchina.com/CustomerService/CustomerServiceInfo.aspx?pageid=zhbz" target="_blank">资费</a>
+                    <li class="ys_1">客服:95555</li>                    <li class="ys_2">信用卡:400-820-5555</li>
+                </ul>
+            </div>
+        	<div>
+            	<ul>
+                	<li class="img"><a href="http://bank.pingan.com/index.shtml" target="_blank"><img src="/Public/home/img/1/pa.png"></a></li>
+                    <li class="ka_1"><a href="http://creditcard.pingan.com/index.shtml" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://bank.pingan.com/geren/index.shtml" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://bank.pingan.com/geren/index.shtml" target="_blank">ATM</a></li>
+                    <li class="ys_1">客服:95511转3</li>                    <li class="ys_2">信用卡:95511转2</li>
+                </ul>
+            </div>
+        	<div>
+            	<ul>
+                	<li class="img"><a href="http://www.cmbc.com.cn/" target="_blank"><img src="/Public/home/img/1/ms.png"></a></li>
+                    <li class="ka_1"><a href="http://creditcard.cmbc.com.cn/" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://www.cmbc.com.cn/cs/Satellite?c=Page&amp;cid=1384590421185&amp;currentId=1378262398990&amp;pagename=cmbc%2FPage%2FTP_map&amp;rendermode=preview#" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://www.cmbc.com.cn/e-service/zfbz.shtml" target="_blank">资费</a>
+                    <li class="ys_1">客服:95568</li>                    <li class="ys_2">信用卡:400-66-95568</li>
+                </ul>
+            </div>
+        	<div>
+            	<ul>
+                	<li class="img"><a href="http://www.cgbchina.com.cn/" target="_blank"><img src="/Public/home/img/1/gf.png"></a></li>
+                    <li class="ka_1"><a href="http://card.cgbchina.com.cn/" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://card.cgbchina.com.cn/Info/12866348" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://card.cgbchina.com.cn/Info/12117013" target="_blank">资费</a>
+                    <li class="ys_1">客服:400-83-08003</li>                    <li class="ys_2">信用卡:95508</li>
+                </ul>
+            </div>
+        	<div>
+            	<ul>
+                	<li class="img"><a href="http://www.hxb.com.cn/chinese/index.html" target="_blank"><img src="/Public/home/img/1/hx.png"></a></li>
+                    <li class="ka_1"><a href="http://creditcard.hxb.com.cn/" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://www.hxb.com.cn/chinese/callcenter/network.jsp?cid2=691113" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://www.hxb.com.cn/chinese/callcenter/guiyuan.jsp?cid2=67" target="_blank">ATM</a></li>
+                    <li class="ys_1">客服:95577</li>                    <li class="ys_2">信用卡:400-66-95577</li>
+                </ul>
+            </div>
+        	<div>
+            	<ul>
+                	<li class="img"><a href="http://www.bankofshanghai.com/" target="_blank"><img src="/Public/home/img/1/shanghai.png"></a></li>
+                    <li class="ka_1"><a href="http://www.bankofshanghai.com/zh/xyk/index.shtml" target="_blank">信用卡中心</a></li>
+                    <li class="ka_2"><a href="http://www.bankofshanghai.com/WebServlet?go=bank_sellfund_pg_Banking&amp;code=wdcx&amp;area=" target="_blank">网点</a></li>
+                    <li class="ka_3"><a href="http://www.bankofshanghai.com/zh/sy/sy_dtjr/1126.shtml" target="_blank">利率</a>
+                    <li class="ys_1">客服:95594</li>                    <li class="ys_2">信用卡:95594</li>
+                </ul>
+            </div>
+            
+            
+        
+        </div>
+    </div>
+</div>
+
+<div class="go-top dn" id="go-top">
+    <a href="javascript:;" class="uc-2vm"></a>
+	<div class="uc-2vm-pop dn">
+		
+		<div class="logo-2wm-box">
+			<img src="/gg/weixin.jpg" alt="厦门有家公司叫靠谱" width="240" height="240">
+		</div>
+		<h2 class="title-2wm">扫一扫关注微信公众号</h2>
+	</div>
+    <a href="/liuyan.html" target="_blank" class="feedback"></a>
+    <a href="javascript:;" class="go"></a>
+</div>
+
+<script>
+$(function(){
+	$(window).on('scroll',function(){
+		var st = $(document).scrollTop();
+		if( st>0 ){
+			if( $('#main-container').length != 0  ){
+				var w = $(window).width(),mw = $('#main-container').width();
+				if( (w-mw)/2 > 70 )
+					$('#go-top').css({'left':(w-mw)/2+mw+20});
+				else{
+					$('#go-top').css({'left':'auto'});
+				}
+			}
+			$('#go-top').fadeIn(function(){
+				$(this).removeClass('dn');
+			});
+		}else{
+			$('#go-top').fadeOut(function(){
+				$(this).addClass('dn');
+			});
+		}	
+	});
+	$('#go-top .go').on('click',function(){
+		$('html,body').animate({'scrollTop':0},500);
+	});
+
+	$('#go-top .uc-2vm').hover(function(){
+		$('#go-top .uc-2vm-pop').removeClass('dn');
+	},function(){
+		$('#go-top .uc-2vm-pop').addClass('dn');
+	});
+});
+</script>
+
+<!--页脚-->
+<div class="width left footer">
+	<div class="width_11 auto footer2">
+    	<a href="/dan/index/id/1.html" target="_blank">关于联行号查询网</a> | <a href="http://www.xm9.org/" target="_blank">久玖支付</a> | <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1583751'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1583751' type='text/javascript'%3E%3C/script%3E"));</script> | <a href="/gg/gg.html" target="_blank">广告服务</a> | 网站客服QQ:335253(微信同号) <br/>
+        ©2015 www.lianhanghao.com 闽ICP备15001843号-1<br/>
+        厦门市靠谱信息技术有限公司版权所有    </div>
+</div>
+
+</body>
+</html>
